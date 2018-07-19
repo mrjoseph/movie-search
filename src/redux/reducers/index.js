@@ -5,7 +5,7 @@ import searchReducer from './searchReducer/searchReducer';
 
 const routeReducer = combineReducers({
   router: routerReducer,
-  usersDetails: searchReducer,
+  searchReducer: searchReducer,
 });
 
 export default routeReducer;

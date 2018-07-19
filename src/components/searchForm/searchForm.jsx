@@ -34,7 +34,7 @@ class UserDetails extends Component {
 }
 
 const mapStateToProps = state => ({
-  firstname: state.usersDetails.firstname,
+  firstname: state.searchReducer.firstname,
 });
 
 UserDetails.propTypes = {

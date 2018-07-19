@@ -1,15 +1,15 @@
-import { FETCH_USER_DETAILS } from '../../actions/searchAction/searchAction';
+import { FETCH_SEARCH_RESULTS } from '../../actions/searchAction/searchAction';
 
 export const INITIAL_STATE = {};
 
-const userReducer = (state = INITIAL_STATE, action = {}) => {
+const searchReducer = (state = INITIAL_STATE, action = {}) => {
   switch (action.type) {
-    case `${FETCH_USER_DETAILS}.SUCCESS`:
+    case `${FETCH_SEARCH_RESULTS}.SUCCESS`:
       return {
         ...state,
         ...action.result,
       };
-    case `${FETCH_USER_DETAILS}.FAILED`:
+    case `${FETCH_SEARCH_RESULTS}.FAILED`:
       return {
         ...state,
         ...action.result,
@@ -20,4 +20,4 @@ const userReducer = (state = INITIAL_STATE, action = {}) => {
   }
 };
 
-export default userReducer;
+export default searchReducer;
