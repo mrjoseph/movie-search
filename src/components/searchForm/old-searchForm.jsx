@@ -2,18 +2,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { userAction } from '../../redux/actions/searchAction/searchAction';
+import { searchAction } from '../../redux/actions/searchAction/searchAction';
 
 import styles from './searchForm.scss';
 
-class UserDetails extends Component {
+class SearchForm extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
-    this.props.userAction(parseInt(e.target.value, 10));
+    this.props.searchAction(parseInt(e.target.value, 10));
   }
   render() {
     const { firstname } = this.props;
@@ -37,14 +37,14 @@ const mapStateToProps = state => ({
   firstname: state.searchReducer.firstname,
 });
 
-UserDetails.propTypes = {
-  userAction: PropTypes.func,
+SearchForm.propTypes = {
+  searchAction: PropTypes.func,
   firstname: PropTypes.string,
 };
 
-UserDetails.defaultProps = {
+SearchForm.defaultProps = {
   firstname: '',
   userAction: () => {},
 };
 
-export default connect(mapStateToProps, { userAction })(UserDetails);
+export default connect(mapStateToProps, { userAction })(SearchForm);

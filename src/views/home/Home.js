@@ -1,9 +1,8 @@
 import React from 'react';
-import styles from './home.scss';
-import UserDetails from '../../components/searchForm/searchForm';
+import UserDetails from '../../components/searchForm/old-searchForm';
 
 const Home = () => (
-  <div className={styles.container}>
+  <div>
     <h1>This is the homepage</h1>
     <UserDetails />
   </div>);
