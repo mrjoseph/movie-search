@@ -9,7 +9,9 @@ import {
   FormControl,
   FormGroup,
 } from 'react-bootstrap';
+
 import { searchAction } from '../../redux/actions/searchAction/searchAction';
+
 class searchForm extends Component {
   constructor(props) {
     super(props);
@@ -21,25 +23,18 @@ class searchForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log('submitted');
-    // this.props.searchAction(parseInt(e.target.value, 10));
+    if(this.state.value.length <= 0) return;
+    this.props.searchAction(this.state.value);
   }
   handleChange(e) {
     this.setState({ value: e.target.value });
   }
 
-  getValidationState() {
-    const length = this.state.value.length;
-    if (length > 1) return 'success';
-    else if (length > 0) return 'error';
-    return null;
-  }
   render() {
     return (
         <form onSubmit={this.handleSubmit}>
           <FormGroup
               controlId="formBasicText"
-              validationState={this.getValidationState()}
           >
             <FormControl
                 type="text"
@@ -59,7 +54,7 @@ class searchForm extends Component {
   }
 }
 const mapStateToProps = state => ({
-  searchResult: state.searchReducer.firstname,
+  searchResult: state.searchReducer,
 });
 
 export default connect(mapStateToProps, { searchAction })(searchForm);

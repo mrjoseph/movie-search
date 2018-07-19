@@ -1,22 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Jumbotron, PageHeader } from 'react-bootstrap';
 import logo from './logo.svg';
 import SearchForm from '../../components/searchForm/searchForm';
+import SearchResult from '../../components/searchResult/searchResult';
 import './App.css';
+import { connect } from 'react-redux';
+import { searchAction } from '../../redux/actions/searchAction/searchAction';
 
-const App = () =>
-    <div className="App">
+class App extends Component {
+  render() {
+    const { Search } = this.props.searchResult;
+    return (
+        <div className="App">
           <PageHeader>
-              Movie Search
+            Movie Search
           </PageHeader>
           <div className="container">
-              <Jumbotron>
+            <Jumbotron>
               <h1>Search for your favorite movie</h1>
-                <SearchForm />
-          </Jumbotron>
+              <SearchForm />
+            </Jumbotron>
+            {Search && <SearchResult result={Search}/>}
           </div>
-      </div>;
+        </div>
+    );
+  }
+}
+const mapStateToProps = state => ({
+  searchResult: state.searchReducer,
+});
 
-
-
-export default App;
+export default connect(mapStateToProps, { searchAction })(App);

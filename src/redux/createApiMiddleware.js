@@ -1,7 +1,6 @@
-export default function createApiMiddleware(client) {
+export default function createApiMiddleware(api) {
   return ({ dispatch, getState }) => (
     next => (action) => {
-      // redux thunk
       if (typeof action === 'function') {
         return action(dispatch, getState);
       }
@@ -26,7 +25,7 @@ export default function createApiMiddleware(client) {
 
       next({ ...rest, type: loading });
 
-      return request(client).then(
+      return request(api).then(
         result => next({ ...rest, result, type: success }),
         error => next({ ...rest, error, type: failed }),
       );
