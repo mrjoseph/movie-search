@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
-  Button,
-  ButtonToolbar,
-  ControlLabel,
-  HelpBlock,
   FormControl,
   FormGroup,
 } from 'react-bootstrap';
@@ -49,8 +44,5 @@ class searchForm extends Component {
     );
   }
 }
-const mapStateToProps = state => ({
-  searchResult: state.searchReducer,
-});
 
-export default connect(mapStateToProps, { searchAction })(searchForm);
+export default connect(null, { searchAction })(searchForm);

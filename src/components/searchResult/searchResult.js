@@ -2,19 +2,33 @@ import React, { Component } from 'react';
 import Proptypes from 'prop-types';
 import './searchresult.css';
 
-
-const ListResult = ({result}) => {
-  console.log(result[0]);
-  return result.map((item) => {
-    return (<li className="list-group-item">{item.Title}</li>)
-  })
+class ListItem extends Component {
+  constructor() {
+    super();
+    this.state = {
+      toggleClass: false,
+    };
+  }
+  toggleClass = () => {
+    this.setState({ toggleClass: !this.state.toggleClass });
+  };
+  render() {
+    const { item } = this.props;
+      return (<li onClick={this.toggleClass} className={this.state.toggleClass ? 'list-group-item active' : 'list-group-item'}>
+        {item.Title}
+      </li>)
+  }
 }
+
 
 const SearchResult = ({result}) => (
   <ul className="list-group">
-   <ListResult result={result}/>
+    {result.map((item) => {
+      return (<ListItem key={item.imdbID} item={item}/>)
+    })}
   </ul>
 );
+
 
 SearchResult.propTypes = {
   result: Proptypes.array.isRequired,

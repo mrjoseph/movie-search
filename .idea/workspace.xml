@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ab776ee-fa35-4f8a-9dc3-e895c7ea81d9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/searchForm/searchForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchForm/searchForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/searchResult/searchResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchResult/searchResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/searchResult/searchresult.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchResult/searchresult.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,11 +29,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchForm.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="searchForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/searchForm/searchForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+            <state relative-caret-position="-518">
+              <caret column="41" selection-start-column="41" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchResult.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/searchResult/searchResult.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-155">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -88,9 +95,9 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/views/app/App.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/components/searchResult/searchResult.js" />
         <option value="$PROJECT_DIR$/src/components/searchResult/searchresult.css" />
         <option value="$PROJECT_DIR$/src/components/searchForm/searchForm.js" />
+        <option value="$PROJECT_DIR$/src/components/searchResult/searchResult.js" />
       </list>
     </option>
   </component>
@@ -143,6 +150,13 @@
               <item name="movie-search" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="searchForm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-search" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="searchResult" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -150,13 +164,6 @@
               <item name="movie-search" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movie-search" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movie-search" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,12 +214,12 @@
       <workItem from="1531770722887" duration="4894000" />
       <workItem from="1531992366752" duration="1088000" />
       <workItem from="1531995275594" duration="12826000" />
-      <workItem from="1532096991189" duration="853000" />
+      <workItem from="1532096991189" duration="4232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19661000" />
+    <option name="totallyTimeSpent" value="23040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -411,13 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/searchResult/searchResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -430,8 +430,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/searchForm/searchForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+        <state relative-caret-position="-518">
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/searchResult/searchResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
