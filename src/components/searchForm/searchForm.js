@@ -41,13 +41,9 @@ class searchForm extends Component {
                 value={this.state.value}
                 placeholder="Enter text"
                 onChange={this.handleChange}
-                onSubmit={this.handleSubmit}
+                onKeyUp={this.handleSubmit}
             />
-            <ButtonToolbar>
-              <Button type="submit" bsStyle="success">Success</Button>
-            </ButtonToolbar>
             <FormControl.Feedback />
-            <HelpBlock>Validation is based on string length.</HelpBlock>
           </FormGroup>
         </form>
     );
