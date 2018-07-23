@@ -9,7 +9,8 @@ import { searchAction } from '../../redux/actions/searchAction/searchAction';
 
 class App extends Component {
   render() {
-    const { Search } = this.props.searchResult;
+    const { Search, Response } = this.props.searchResult;
+    console.log('Response', Response);
     return (
         <div className="App">
           <PageHeader>
@@ -20,7 +21,7 @@ class App extends Component {
               <h1>Search for your favorite movie</h1>
               <SearchForm />
             </Jumbotron>
-            {Search && <SearchResult result={Search}/>}
+            <SearchResult response={Response} result={Search}/>
           </div>
         </div>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
+import Hoc from '../hoc/Hoc';
 import './searchresult.css';
 
 class ListItem extends Component {
@@ -33,4 +34,4 @@ const SearchResult = ({result}) => (
 SearchResult.propTypes = {
   result: Proptypes.array.isRequired,
 };
-export default SearchResult;
+export default Hoc(SearchResult);
